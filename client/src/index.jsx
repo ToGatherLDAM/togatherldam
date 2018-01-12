@@ -3,20 +3,18 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-       
-        };
-    }
+    this.state = {
+      events: []
+    };
+  }
+
+
+  render() {
     
-
-
-    render() {
-        return (
-            
-    )
+  }
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));

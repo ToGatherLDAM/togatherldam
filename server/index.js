@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-// // const router = express.Router();
+// const router = express.Router();
 // const axios = require('axios');
 
 // const router = require('./routes.js');
@@ -16,7 +16,6 @@ const app = express();
 // app.use('/events', (req, res) => {
 
 // });
-// app.get('/', (req, res) => res.send('Hello World!'));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 
