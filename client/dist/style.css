@@ -1,0 +1,56 @@
+/*body{
+  background-image: linear-gradient(to bottom right, #2ccaba, #1ec68d);
+    color: #fff;
+}*/
+
+#signInTitle {
+  font-size: 355%; 
+  font-family: 'Open Sans',serif;
+  font-style: oblique;
+  text-align: center;
+  color: #00ced1;
+}
+.signInTittle {
+  font-family: 'Open Sans', sans-serif;  
+}
+
+
+.signInForm {
+    position: absolute;
+    height: 26%;
+    width: 13%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    border-radius: 5px;
+    background-color:rgb(76,181,216);
+    text-align: center;
+}
+
+.signInInput {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-radius: 1px;
+  padding: 16px;
+  outline: 0;
+  font-family: 'Open Sans', sans-serif;  
+  font-size: 0.95em;
+}
+
+.loginButton{
+  /*background-color: pink;
+  font-family: 'Open Sans', sans-serif;  */
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #00ced1;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px transparentize(#666, .5);
+    &:focus {
+      outline: none;
+    }
+
+}
