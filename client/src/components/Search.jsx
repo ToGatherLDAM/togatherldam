@@ -11,7 +11,7 @@ class Search extends React.Component {
   }
 
   onChange(e) {
-    console.log('searched',e.target.value)
+    console.log('searched',e.target.value);
     this.setState({
       term: e.target.value,
     });
