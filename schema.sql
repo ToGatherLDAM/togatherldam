@@ -58,4 +58,5 @@ INSERT INTO rsvp (users_id, events_id, rsvp) VALUES (7,2,'no');
 
 /*  Execute t file from the command line by typing:
  *  psql postgres cyndaquils < schema.sql
- *  to create the database and the tables.*/
+ *  to create the database and the tables.
+ if doesn't work add manually*/

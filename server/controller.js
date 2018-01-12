@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 const db = require('../database');
 
 const get = (req, res) => {
