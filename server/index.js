@@ -13,9 +13,7 @@ const app = express();
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use('/events', (req, res) => {
 
-// });
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 
