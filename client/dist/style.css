@@ -3,15 +3,47 @@
     color: #fff;
 }*/
 
-#signInTitle {
-  font-size: 355%; 
+#search{
   font-family: 'Open Sans',serif;
   font-style: oblique;
   text-align: center;
   color: #00ced1;
 }
+.searchBar{
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  /* display: block; */
+  width: 15%;
+  border-width: 1px;
+  border-radius: 1px;
+  padding: 5px;
+  outline: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95em;
+}
+.searchButton{
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 6px;
+    background: #00ced1;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px transparentize(#666, .5);
+}
+
+#signInTitle {
+  font-size: 355%;
+  font-family: 'Open Sans',serif;
+  font-style: oblique;
+  text-align: center;
+  color: #00ced1;
+}
+
 .signInTittle {
-  font-family: 'Open Sans', sans-serif;  
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -36,7 +68,7 @@
   border-radius: 1px;
   padding: 16px;
   outline: 0;
-  font-family: 'Open Sans', sans-serif;  
+  font-family: 'Open Sans', sans-serif;
   font-size: 0.95em;
 }
 
@@ -51,6 +83,8 @@
     box-shadow: 1px 2px 3px transparentize(#666, .5);
     &:focus {
       outline: none;
-    }
-
 }
+
+
+
+

@@ -23,9 +23,10 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
-        Find an event <input value={this.state.terms} onChange={this.onChange} />
-        <button onClick={this.search}> Search </button>
+      <div id='search'>
+      <h1 id='signInTitle'>ToGather</h1>
+        <input className="searchBar" value={this.state.terms} onChange={this.onChange} placeholder="find an event"/>
+        <button className="searchButton" onClick={this.search}> Search </button>
       </div>);
   }
 }

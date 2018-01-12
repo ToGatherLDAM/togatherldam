@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Search from './components/Search.jsx';
+import Login from './components/Login.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
     return (
       <div>
        <Search />
+       <Login />
       </div>
     );
   }
