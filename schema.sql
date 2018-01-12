@@ -1,3 +1,7 @@
+
+
+
+
 -- create a db
 DROP DATABASE IF EXISTS togather_db;
 CREATE DATABASE togather_db;
