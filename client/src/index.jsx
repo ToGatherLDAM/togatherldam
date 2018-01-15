@@ -1,29 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
-import Search from './components/Search.jsx';
-import Login from './components/Login.jsx';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+import Header from './components/Header.jsx';
+// import Main from './components/Main.jsx';
 
-    this.state = {
-      events: []
-    };
-  }
+const App = () => (
+  <div>
+    <Header />
+  </div>
+  )
 
-
-  render() {
-    return (
-      <div>
-       <Search />
-       <Login />
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById('app'));
-
-//q={this.props.q}
+ReactDOM.render(
+    <App />
+  , document.getElementById('app'));

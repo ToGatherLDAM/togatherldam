@@ -1,6 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-class Search extends React.Component {
+class SearchMyEvent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +12,7 @@ class Search extends React.Component {
   }
 
   onChange(e) {
-    console.log('searched',e.target.value);
+    console.log('searched',e.target.value)
     this.setState({
       term: e.target.value,
     });
@@ -23,12 +24,11 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div id='search'>
-      <h1 id='signInTitle'>ToGather</h1>
-        <input className="searchBar" value={this.state.terms} onChange={this.onChange} placeholder="find an event"/>
-        <button className="searchButton" onClick={this.search}> Search </button>
+      <div>
+        Find My Event <input value={this.state.terms} onChange={this.onChange} />
+        <button onClick={this.search}> Search </button>
       </div>);
   }
 }
 
-export default Search;
+export default SearchMyEvent;

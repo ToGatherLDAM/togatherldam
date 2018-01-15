@@ -23,7 +23,10 @@ build/
 .DS_Store
 .eslintrc.js
 client/dist/bundle.js
+<<<<<<< HEAD
+=======
 
+>>>>>>> d138dac78fafcb6f61e033719b7ab5d74f6cd344
 
 # Dependency directorys
 # Deployed apps should consider commenting these lines out:

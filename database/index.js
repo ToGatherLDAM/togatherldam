@@ -1,81 +1,55 @@
-const pg = require('pg');
+<<<<<<< HEAD
 const promise = require('bluebird');
-const express = require('express');
-const path = require('path');
 
 const options = {
-  promiseLib: promise,
+  promiseLib: promise
 };
+
 const pgp = require('pg-promise')(options);
 
-const connectionString = 'postgres://localhost:3000/events';
+const config = {
+  host: 'localhost',
+  port: 5432,
+  user: 'lara',
+  password: '',
+  database: 'togather_db'
+}
 
-const db = pgp(connectionString);
-
-db.connect();
+const db = pgp(config);
 
 
-const getAllEvents = (req, res, next) => {
-  db.any('select * from Events')
-    .then((data) => {
-      res.status(200)
-        .json(data);
-    })
-    .catch((err) => {
-      return next(err);
-    });
+const getAllEvents = (req, res) => {
+  return db.any('select * from events');
 };
 
-const getSingleEvent = (req, res, next) => {
-  const eventId = parseInt(req.params.id);
-  db.one('select * from Events where id = $1', eventId)
-    .then((data) => {
-      res.status(200)
-        .json(data);
-    })
-    .catch((err) => {
-      return next(err);
-    });
+const getSingleEvent = (req, res, eventId) => {
+  return db.one('select * from events where id = $1', [true]);
 };
 
-const createEvent = (req, res, next) => {
-  // req.body.date = parseInt(req.body.date);
-  // req.body.time = parseInt(req.body.time);
-  db.none('insert into Events (name, description, date, time) values(${name}, ${description}, ${date}, ${time})', req.body)
+const createEvent = (params) => {
+  console.log('MY PARAMS', params);
+  db.none('insert into events (name, description) values($1, $2)', params)
     .then(() => {
-      res.status(200)
-        .json('Success');
+      console.log('Success');
     })
-    .catch((err) => {
-      return next(err);
-    });
+    .catch(error => {
+      console.log(error);
+    })
 };
 
-const updateEvent = (req, res, next) => {
-  db.none('update events set name=$1, description=$2, date=$3, time=$4',
-  [req.body.name, req.body.description, req.body.date, req.body.time])
-    .then(() => {
-      res.status(200)
-        .json('Success');
-    })
-    .catch((err) => {
-      return next(err);
-    });
+// , location, event_date, start_time, end_time, price, nameYelp, location, image_url
+//$3, $4, $5, $6, $7, $8, $9, $10
+
+// const updateEvent = (req, res) => {
+//   return db.none('update events set name=$1, description=$2, date=$3, time=$4',
+//   [req.body.name, req.body.description, req.body.date, req.body.time])
+  
+// };
+
+
+const removeEvent = (req, res) => {
+  return db.result('delete from events where id = $1', false);
 };
-
-
-const removeEvent = (req, res, next) => {
-  const eventId = req.params.id;
-  db.result('delete from Events where id = $1', eventId)
-    .then((result) => {
-      res.status(200)
-        .json('Success');
-    })
-    .catch((err) => {
-      return next(err);
-    });
-};
-
 
 
 
@@ -84,6 +58,5 @@ module.exports = {
   getAllEvents: getAllEvents,
   getSingleEvent: getSingleEvent,
   createEvent: createEvent,
-  updateEvent: updateEvent,
   removeEvent: removeEvent,
 };
