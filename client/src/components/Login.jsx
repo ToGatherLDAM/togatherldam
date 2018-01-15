@@ -1,12 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-// import Popover from '@terebentina/react-popover';
 import Popover from 'react-popover-component';
-// require('react-popover-component/dist/styles.css');
 
-// optional, you can bring your own styles if you want
-// import '@terebentina/react-popover/lib/styles.css';
 
 const Login = () => (
   <div>
@@ -21,6 +15,41 @@ const Login = () => (
   
 
 export default Login;
-  // <div> 
-  //   Login
-  // </div>
+
+
+
+// class LogIn extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       username: '',
+//       password: ''
+
+//     };
+//     this.onSubmit = this.onSubmit.bind(this);
+//   }
+//   ComponentDidMount() {
+//     this.onSubmit();
+//   }
+
+
+
+
+//   onSubmit() {}
+
+//   render() {
+//     return (
+//       <div>
+//         <form className='signInForm'>
+//           <h2 className='signInTittle'>Sign in</h2>
+//           <input className='signInInput' type="text" ref="username" placeholder="enter you username" />
+//           <input className='signInInput' type="password" ref="password" placeholder="enter password" />
+//           <input className='signInInput loginButton' type="submit" value="Login" />
+//         </form>
+//       </div>
+//     );
+//   }
+// }
+
+// export default LogIn;
+

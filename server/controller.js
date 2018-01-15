@@ -90,5 +90,4 @@ const searchForNew = (req, res) => {
 module.exports = { 
 	getAllEvents: getAllEvents,
 	searchForNew: searchForNew,
-
 };

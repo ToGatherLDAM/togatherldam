@@ -49,8 +49,11 @@
     "jshint": "^2.9.5",
     "jshint-loader": "^0.8.4",
     "node-libs-browser": "^2.1.0",
+<<<<<<< HEAD
     "react-icons": "^2.2.7",
     "react-router-dom": "^4.2.2",
+=======
+>>>>>>> d138dac78fafcb6f61e033719b7ab5d74f6cd344
     "webpack": "^3.10.0",
     "webpack-watch-server": "^1.2.1",
     "webpack-watcher": "^0.2.3"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const promise = require('bluebird');
 
 const options = {
@@ -49,9 +50,6 @@ const createEvent = (params) => {
 const removeEvent = (req, res) => {
   return db.result('delete from events where id = $1', false);
 };
-
-
-
 
 
 
